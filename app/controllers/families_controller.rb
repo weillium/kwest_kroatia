@@ -8,6 +8,8 @@ class FamiliesController < ApplicationController
 
   # GET /families/1
   def show
+    @user = User.new
+    @score = Score.new
   end
 
   # GET /families/new

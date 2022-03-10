@@ -1,0 +1,31 @@
+<!-- Form score start -->
+<%= form_with(model: @score, local: true) do |f| %>
+<!-- Form score end -->
+
+  <!-- Label and input for family_id start -->
+  <!-- Input for family_id start -->
+  <%= f.hidden_field :family_id, value: @family.id %>
+  <!-- Input for family_id end -->
+  <!-- Label and input for family_id end -->
+
+  <!-- Label and input for score start -->
+  <div class="form-group">
+    <%= f.label :score %>
+
+    <!-- Input for score start -->
+    <%= f.text_field :score, class: "form-control" %>
+    <!-- Input for score end -->
+  </div>
+  <!-- Label and input for score end -->
+
+  <!-- Label and input for dsecription start -->
+  <div class="form-group">
+    <%= f.label :dsecription %>
+    <!-- Input for dsecription start -->
+    <%= f.text_area :dsecription, rows: "3", class: "form-control" %>
+    <!-- Input for dsecription end -->
+  </div>
+  <!-- Label and input for dsecription end -->
+
+  <%= f.submit "Create score", class: "btn btn-block btn-outline-secondary" %>
+<% end %>

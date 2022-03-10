@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Direct associations
 
+  belongs_to :user_type
+
   has_many   :agenda_items,
              :foreign_key => "leader_id",
              :dependent => :destroy

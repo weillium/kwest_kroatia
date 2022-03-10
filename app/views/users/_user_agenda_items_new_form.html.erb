@@ -1,79 +1,45 @@
-<!-- Form agenda_item start -->
 <%= form_with(model: @agenda_item, local: true) do |f| %>
-<!-- Form agenda_item end -->
 
-  <!-- Label and input for start_time start -->
   <div class="form-group">
     <%= f.label :start_time %>
-    <!-- Input for start_time start -->
     <%= f.datetime_select :start_time, class: "form-control" %>
-    <!-- Input for start_time end -->
   </div>
-  <!-- Label and input for start_time end -->
 
-  <!-- Label and input for end_time start -->
   <div class="form-group">
     <%= f.label :end_time %>
-    <!-- Input for end_time start -->
     <%= f.datetime_select :end_time, class: "form-control" %>
-    <!-- Input for end_time end -->
   </div>
-  <!-- Label and input for end_time end -->
 
-  <!-- Label and input for location start -->
   <div class="form-group">
     <%= f.label :location %>
 
-    <!-- Input for location start -->
     <%= f.text_field :location, class: "form-control" %>
-    <!-- Input for location end -->
   </div>
-  <!-- Label and input for location end -->
 
-  <!-- Label and input for activity start -->
   <div class="form-group">
     <%= f.label :activity %>
 
-    <!-- Input for activity start -->
     <%= f.text_field :activity, class: "form-control" %>
-    <!-- Input for activity end -->
   </div>
-  <!-- Label and input for activity end -->
 
-  <!-- Label and input for description start -->
   <div class="form-group">
     <%= f.label :description %>
-    <!-- Input for description start -->
     <%= f.text_area :description, rows: "3", class: "form-control" %>
-    <!-- Input for description end -->
   </div>
-  <!-- Label and input for description end -->
 
-  <!-- Label and input for photo start -->
   <div class="form-group">
     <%= f.label :photo %>
 
-    <!-- Input for photo start -->
     <%= f.file_field :photo, class: "form-control" %>
-    <!-- Input for photo end -->
   </div>
-  <!-- Label and input for photo end -->
 
-  <!-- Label and input for leader_id start -->
-  <!-- Input for leader_id start -->
   <%= f.hidden_field :leader_id, value: @user.id %>
-  <!-- Input for leader_id end -->
-  <!-- Label and input for leader_id end -->
 
-  <!-- Label and input for is_cyoa start -->
   <div class="form-group">
     <%= f.label :is_cyoa %>
 
-    <!-- Input for is_cyoa start -->
     <%= f.text_field :is_cyoa, class: "form-control" %>
-    <!-- Input for is_cyoa end -->
   </div>
-  <!-- Label and input for is_cyoa end -->
 
   <%= f.submit "Create agenda item", class: "btn btn-block btn-outline-secondary" %>
 <% end %>

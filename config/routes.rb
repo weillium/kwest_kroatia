@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "agenda_items#index"
   resources :scores
   resources :families
   resources :user_types

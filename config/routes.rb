@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :scores
   resources :families
   resources :user_types
   resources :agenda_items

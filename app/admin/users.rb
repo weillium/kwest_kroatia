@@ -1,5 +1,7 @@
 ActiveAdmin.register User do
 
+ permit_params :email, :password, :first_name, :last_name, :user_type_id, :family_id, :phone_number, :dietary_restrictions, :headshot, :walkup_song, :adventure_score, :nightlife_score, :beachwater_score, :freetime_score
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #

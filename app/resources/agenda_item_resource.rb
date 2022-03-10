@@ -17,5 +17,4 @@ class AgendaItemResource < ApplicationResource
              resource: UserResource
 
   # Indirect associations
-
 end

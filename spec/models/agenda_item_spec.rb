@@ -1,19 +1,14 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe AgendaItem, type: :model do
-  
-    describe "Direct Associations" do
-
+  describe "Direct Associations" do
     it { should belong_to(:leader) }
+  end
 
-    end
+  describe "InDirect Associations" do
+  end
 
-    describe "InDirect Associations" do
-
-    end
-
-    describe "Validations" do
-
+  describe "Validations" do
     it { should validate_presence_of(:activity) }
 
     it { should validate_presence_of(:description) }
@@ -27,6 +22,5 @@ RSpec.describe AgendaItem, type: :model do
     it { should validate_presence_of(:location) }
 
     it { should validate_presence_of(:start_time) }
-
-    end
+  end
 end

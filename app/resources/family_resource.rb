@@ -13,5 +13,4 @@ class FamilyResource < ApplicationResource
   has_many   :scores
 
   # Indirect associations
-
 end

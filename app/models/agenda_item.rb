@@ -1,10 +1,10 @@
-require 'open-uri'
+require "open-uri"
 class AgendaItem < ApplicationRecord
   before_validation :geocode_location
 
   def geocode_location
-    if self.location.present?
-      url = "https://maps.googleapis.com/maps/api/geocode/json?key=#{ENV['GMAP_API_KEY']}&address=#{URI.encode(self.location)}"
+    if location.present?
+      url = "https://maps.googleapis.com/maps/api/geocode/json?key=#{ENV['GMAP_API_KEY']}&address=#{URI.encode(location)}"
 
       raw_data = open(url).read
 
@@ -24,30 +24,29 @@ class AgendaItem < ApplicationRecord
   # Direct associations
 
   belongs_to :leader,
-             :class_name => "User"
+             class_name: "User"
 
   # Indirect associations
 
   # Validations
 
-  validates :activity, :presence => true
+  validates :activity, presence: true
 
-  validates :description, :presence => true
+  validates :description, presence: true
 
-  validates :end_time, :presence => true
+  validates :end_time, presence: true
 
-  validates :is_cyoa, :presence => true
+  validates :is_cyoa, presence: true
 
-  validates :leader_id, :presence => true
+  validates :leader_id, presence: true
 
-  validates :location, :presence => true
+  validates :location, presence: true
 
-  validates :start_time, :presence => true
+  validates :start_time, presence: true
 
   # Scopes
 
   def to_s
     start_time
   end
-
 end

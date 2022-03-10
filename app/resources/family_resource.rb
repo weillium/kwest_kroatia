@@ -8,6 +8,8 @@ class FamilyResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :scores
+
   # Indirect associations
 
 end
